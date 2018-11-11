@@ -6,17 +6,17 @@ const jwt = require('jsonwebtoken');
 const keys = require('../../keys');
 
 //Schema Dependentcies
-const User = require('../models/user');
+const Admin = require('./adminsModel');
 // const Restaurant = require('../models/restaurant');
 
-//POST /user/signup
+//POST /admin/signup
 router.post('/signup', (req, res, next) => {
-    User.find({ email: req.body.email })
+    Admin.find({ email: req.body.email })
         .exec()
-        .then(user => {
-            if (user.length >= 1) {
+        .then(admin => {
+            if (admin.length >= 1) {
                 return res.status(409).json({
-                    message: 'User has already registered with this email.'
+                    message: 'Email already taken.'
                 })
             } else {
                 bcrypt.hash(req.body.password, 10, (err, hash) => {
@@ -25,17 +25,19 @@ router.post('/signup', (req, res, next) => {
                             error: err
                         })
                     } else {
-                        const user = new User({
+                        const admin = new Admin({
                             _id: new mongoose.Types.ObjectId(),
+                            firstName: req.body.firstName,
+                            lastName: req.body.lastName,
                             email: req.body.email,
                             password: hash
                         });
-                        user
+                        admin
                             .save()
                             .then(result => {
                                 console.log(result);
                                 res.status(200).json({
-                                    message: "User Created"
+                                    message: "Admin Account Created"
                                 })
                             })
                             .catch(err => {
@@ -51,17 +53,17 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.post('/login', (req, res, next) => {
-    User.find({ email: req.body.email })
+    Admin.find({ email: req.body.email })
         .exec()
-        .then(user => {
-            if (user.length < 1) {
+        .then(admin => {
+            if (admin.length < 1) {
                 return res.status(401).json({
                     message: 'Auth failed'
                 })
             }
-            console.log(user[0]);
+            console.log(admin[0]);
             //Verifies password by de-salting
-            bcrypt.compare(req.body.password, user[0].password, (err, result) => {
+            bcrypt.compare(req.body.password, admin[0].password, (err, result) => {
                 if (err) {
                     return res.status(401).json({
                         message: 'Auth failed'
@@ -69,13 +71,16 @@ router.post('/login', (req, res, next) => {
                 }
                 if (result) {
                     const token = jwt.sign({
-                            email: user[0].email,
-                            userId: user[0]._id
+                            email: admin[0].email,
+                            id: admin[0]._id,
+                            firstName: admin[0].firstName,
+                            lastName: admin[0].lastName
                         },
                         keys.jwt.key, {
                             expiresIn: "1h"
                         }
                     );
+                    console.log('Bearer ' + token);
                     return res.status(200).json({
                         message: "Auth successful",
                         token: token
@@ -96,12 +101,12 @@ router.post('/login', (req, res, next) => {
         });
 });
 
-router.delete("/:userId", (req, res, next) => {
-    User.remove({ _id: req.body.userId })
+router.delete("/:adminId", (req, res, next) => {
+    Admin.remove({ _id: req.body.adminId })
         .exec()
         .then(result => {
             res.status(200).json({
-                message: "User deleted"
+                message: "Admin deleted"
             });
         })
         .catch(err => {

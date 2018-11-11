@@ -4,7 +4,7 @@ const GoogleStrategy = require('passport-google-oauth20');
 const keys = require('../../keys');
 // const WechatStrategy = require('passport-wechat');
 const mongoose = require('mongoose');
-const User = require('../models/user');
+const User = require('../users/usersModel');
 
 
 passport.serializeUser((user, done) => {

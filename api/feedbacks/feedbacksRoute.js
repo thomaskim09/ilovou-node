@@ -6,9 +6,9 @@ const mongoose = require('mongoose');
 const oAuthcheck = require('../middleware/oauth-check');
 
 //Schema Dependentcies
-const Feedback = require('../models/feedback');
-const Restaurant = require('../models/restaurant');
-const User = require('../models/user');
+const Feedback = require('./feedbacksModel');
+const Restaurant = require('../restaurants/restaurantsModel');
+const User = require('../users/usersModel');
 
 
 //GET /feedback/restaurant {restaurantId}

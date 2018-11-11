@@ -35,11 +35,11 @@ try {
 
 //Define routes to folder paths
 const authRoutes = require('./api/routes/auth');
-const restaurantRoutes = require('./api/routes/restaurants');
+const restaurantRoutes = require('./api/restaurants/restaurantsRoute');
 const uploadRoutes = require('./api/routes/uploads');
-const userRoutes = require('./api/routes/users');
-const adminRoutes = require('./api/routes/admin');
-const feedbackRoutes = require('./api/routes/feedback');
+const userRoutes = require('./api/users/usersRoute');
+const adminRoutes = require('./api/admins/adminsRoute');
+const feedbackRoutes = require('./api/feedbacks/feedbacksRoute');
 
 //Log requests
 app.use(morgan('dev'));

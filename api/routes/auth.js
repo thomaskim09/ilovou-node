@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const passport = require('passport')
 
-const User = require('../models/user');
+const User = require('../users/usersModel');
 
 
 //GET /auth/login/google --> Authenticate with google.
