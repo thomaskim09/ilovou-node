@@ -34,7 +34,7 @@ try {
 
 
 //Define routes to folder paths
-const authRoutes = require('./auth/auth');
+const authRoutes = require('./api/auth/auth');
 const restaurantRoutes = require('./api/restaurants/restaurantsRoute');
 const uploadRoutes = require('./api/routes/uploadsRoute');
 const userRoutes = require('./api/users/usersRoute');

@@ -1,4 +1,4 @@
-const keys = require('../keys');
+const keys = require('../../keys');
 
 module.exports = (req, res, next) => {
     if (!req.user) {
