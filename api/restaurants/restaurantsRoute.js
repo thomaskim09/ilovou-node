@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const Restaurant = require('./restaurantsModel');
-const checkAuth = require('../middleware/authentication');
+const checkAuth = require('../../auth/authentication');
 
 const RestaurantController = require('./restaurantsController');
 //GET /restaurants

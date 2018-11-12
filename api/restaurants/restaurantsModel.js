@@ -1,89 +1,135 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const restaurantSchema = mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    details: {
-        restaurantName: { type: String, required: true },
-        address: {
-            city: String,
-            postcode: Number,
-            state: String
-        },
-        fullAddress: String,
-        shortAreaName: String,
-        restaurantImage: String,
-        rating: mongoose.Schema.Types.Decimal128,
-        restaurantType: String,
-        costPerPax: Number,
-        currency: String,
-        shopOpenTime: String,
-        shopCloseTime: String,
-        contact: String,
-        hasMenu: Boolean,
-        hasReservation: Boolean,
+  _id: mongoose.Schema.Types.ObjectId,
+  details: {
+    restaurantName: { type: String, required: true },
+    restaurantProfileImage: String,
+    address: {
+      area: String,
+      postcode: Number,
+      city: String,
+      state: String,
+      country: String
     },
-    vouchers: [{
-        voucherId: mongoose.Schema.Types.ObjectId,
-        voucherImage: String,
-        voucherName: String,
-        areaAvailable: String,
-        restaurantArea: String,
-        newPrice: mongoose.Schema.Types.Decimal128,
-        basePrice: mongoose.Schema.Types.Decimal128,
-        suitablePax: Number, // (optional)
-        quantitySold: Number,
-        limitedQuantity: Number, // (optional)
-        soldOutTime: Date, // (optional) sold out time comes with the limited quantity
-        limitQuantityPerUser: Number, //(optional)
-        userReachedLimitQuantity: [ // User who exceed max quantity, will not view the voucher in voucher page
+    fullAddress: String,
+    shortAreaName: String,
+    rating: mongoose.Schema.Types.Decimal128,
+    restaurantType: String,
+    costPerPax: Number,
+    currency: String,
+    currencyCode: String,
+    routineRestDay: Number,
+    businiessHours: [
+      {
+        day: String,
+        openTime: Date,
+        closeTime: Date
+      }
+    ],
+    contact: String,
+    hasMenu: Boolean,
+    hasReservation: Boolean
+  },
+  vouchers: [
+    {
+      voucherId: mongoose.Schema.Types.ObjectId,
+      voucherImage: String,
+      voucherName: String,
+      voucherType: String,
+      suitablePax: Number,
+      newPrice: mongoose.Schema.Types.Decimal128,
+      basePrice: mongoose.Schema.Types.Decimal128,
+      quantitySold: Number,
+      limitedQuantity: Number, // (optional)
+      soldOutTime: Date, // (optional) sold out time comes with the limited quantity
+      limitQuantityPerUser: Number, //(optional)
+      userReachedLimitQuantity: [
+        // User who exceed max quantity, will not view the voucher in voucher page
+        {
+          userId: String,
+          quantityBrought: Number
+        }
+      ],
+      limitedEndTime: Date, //(optional)
+      grabStartTime: Date, //(optional)
+      groupVoucherDetails: [
+        {
+          groupQuantity: Number,
+          groupPricePerUnit: mongoose.Schema.Types.Decimal128
+        }
+      ],
+      quantityDetails: {
+        // This field is for Quantity Voucher
+        quantityTitle: String,
+        quantityContents: [
+          {
+            itemName: String,
+            itemNewPrice: mongoose.Schema.Types.Decimal128,
+            itemPreviousPrice: mongoose.Schema.Types.Decimal128
+          }
+        ]
+      },
+      setDetails: [
+        {
+          setTitle: String,
+          setContents: [
             {
-                userId: String,
-                quantityBrought: Number
+              setName: String,
+              setUnit: Number,
+              setPrice: mongoose.Schema.Types.Decimal128
             }
-        ],
-        limitedEndTime: Date, //(optional)
-        grabStartTime: Date, //(optional)
-        groupVoucherDetails: [{
-            groupQuantity: Number,
-            groupPricePerUnit: mongoose.Schema.Types.Decimal128
-        }],
-        quantityDetails: { // This field is for Quantity Voucher
-            title: String,
-            contents: [{
-                itemName: String,
-                itemNewPrice: mongoose.Schema.Types.Decimal128,
-                itemPreviousPrice: mongoose.Schema.Types.Decimal128
-            }]
-        },
-        mealDetails: [{
-            mealTitle: String,
-            mealContents: [{
-                mealName: String,
-                mealUnit: Number,
-                mealPrice: Number
-            }]
-        }],
-        voucherRules: {
-            validFrom: Date,
-            validUntil: Date,
-            startHour: String,
-            endHour: String,
-            ruleDetails: [String]
-        },
-        status: String
-    }],
-    // feedBack: [{
-    //     userId: String,
-    //     profileImage: String,
-    //     userName: String,
-    //     userRated: Number,
-    //     feedbackContent: String,
-    //     feedbackTime: Date,
-    //     imageUploadeds: [String],
-    //     restaurantReplyStatus: Boolean,
-    //     restaurantReplyContent: String
-    // }],
-    searchTags: [String]
+          ]
+        }
+      ],
+      voucherRules: {
+        validFrom: Date,
+        validUntil: Date,
+        startHour: Date,
+        endHour: Date,
+        ruleDetails: [String]
+      },
+      status: String
+    }
+  ],
+  reservation: {
+      reservationSettings: {
+          maxReservationDay: Number,
+          holidays: [
+              {
+                  holidayName: String,
+                  holidayDate: Date
+              }
+          ],
+          paxSettings: {
+              minPax: Number,
+              maxPax: Number
+          }
+      },
+      reservationDetails: [
+          {
+              reservationId: mongoose.Schema.Types.ObjectId,
+              userId: mongoose.Schema.Types.ObjectId,
+              reservationDate: Date,
+              reservationTime: Date,
+              dinningPax: Number,
+              dinningArea: String,
+              remark: String, // (optional)
+          }
+      ]
+  },
+  // feedBack: [{
+  //     userId: String,
+  //     profileImage: String,
+  //     userName: String,
+  //     userRated: Number,
+  //     feedbackContent: String,
+  //     feedbackTime: Date,
+  //     imageUploadeds: [String],
+  //     restaurantReplyStatus: Boolean,
+  //     restaurantReplyContent: String
+  // }],
+  searchTags: [mongoose.Schema.Types.ObjectId]
 });
 
-module.exports = mongoose.model('Restaurant', restaurantSchema);
+module.exports = mongoose.model("Restaurant", restaurantSchema);

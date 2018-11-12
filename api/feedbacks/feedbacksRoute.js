@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 //Auth check
-const oAuthcheck = require('../middleware/oauth-check');
+const oAuthcheck = require('../../auth/oauth-check');
 
 //Schema Dependentcies
 const Feedback = require('./feedbacksModel');

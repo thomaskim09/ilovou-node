@@ -1,7 +1,7 @@
 const Restaurant = require('./restaurantsModel');
 
 exports.get_all_restaurants = (req, res, next) => {
-    Restaurant.find({})
+    Restaurant.find({}) 
         //.limit()
         // .select('_id name address rating')
         .exec()
