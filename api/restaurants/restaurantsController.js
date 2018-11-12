@@ -1,12 +1,12 @@
 const Restaurant = require('./restaurantsModel');
 
 exports.get_all_restaurants = (req, res, next) => {
-    Restaurant.find({}) 
+    Restaurant.find({})
         //.limit()
         // .select('_id name address rating')
         .exec()
         .then(docs => {
-            // console.log(docs.toObject())
+            // console.log(docs.toObject()) 
             const response = {
                 count: docs.length,
                 data: docs.map(doc => {
@@ -25,13 +25,19 @@ exports.get_all_restaurants = (req, res, next) => {
         })
         .catch(err => {
             console.log(err);
-            res.status(500).json({ error: err });
+            res.status(500).json({
+                error: err
+            });
         });
 };
 
 exports.get_restaurant_details = (req, res, next) => {
     const id = req.query.restaurantId;
-    if (!id) { res.status(400).json({ "message": "Missing request paramaters" }); }
+    if (!id) {
+        res.status(400).json({
+            "message": "Missing request paramaters"
+        });
+    }
     Restaurant.findById(id)
         .exec()
         .then(
@@ -40,6 +46,8 @@ exports.get_restaurant_details = (req, res, next) => {
             })
         .catch(err => {
             console.log(err);
-            res.status(500).json({ error: err });
+            res.status(500).json({
+                error: err
+            });
         });
 };

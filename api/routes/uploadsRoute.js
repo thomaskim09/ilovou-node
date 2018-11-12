@@ -46,7 +46,7 @@ router.post('/restaurant', upload.single('img'), (req, res, next) => {
         res.status(200).json({
             "message": "Image uploaded successfully",
             "file": req.file
-        });
+        }); 
     }
     // Everything went fine.
 });
