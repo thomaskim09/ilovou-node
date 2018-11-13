@@ -8,7 +8,15 @@ const restaurantSchema = mongoose.Schema({
       required: true
     },
     restaurantProfileImage: String,
+    restaurantGallery: [
+      {
+        categoryId: mongoose.Schema.Types.ObjectId,
+        categoryName: String,
+        categoryImages: [String]
+      }
+    ],
     address: {
+      street: String,
       area: String,
       postcode: Number,
       city: String,
@@ -17,6 +25,7 @@ const restaurantSchema = mongoose.Schema({
     },
     fullAddress: String,
     shortAreaName: String,
+    areaKnownAs: String,
     rating: mongoose.Schema.Types.Decimal128,
     restaurantType: String,
     costPerPax: Number,
@@ -62,17 +71,19 @@ const restaurantSchema = mongoose.Schema({
           groupPricePerUnit: mongoose.Schema.Types.Decimal128
         }
       ],
-      quantityDetails: {
-        // This field is for Quantity Voucher
-        quantityTitle: String,
-        quantityContents: [
-          {
-            itemName: String,
-            itemNewPrice: mongoose.Schema.Types.Decimal128,
-            itemPreviousPrice: mongoose.Schema.Types.Decimal128
-          }
-        ]
-      },
+      quantityDetails: [
+        {
+          // This field is for Quantity Voucher
+          quantityTitle: String,
+          quantityContents: [
+            {
+              itemName: String,
+              itemNewPrice: mongoose.Schema.Types.Decimal128,
+              itemPreviousPrice: mongoose.Schema.Types.Decimal128
+            }
+          ]
+        }
+      ],
       setDetails: [
         {
           setTitle: String,
@@ -117,7 +128,8 @@ const restaurantSchema = mongoose.Schema({
         reservationTime: Date,
         dinningPax: Number,
         dinningArea: String,
-        remark: String // (optional)
+        remark: String, // (optional)
+        isReservationAccepted: Boolean
       }
     ]
   },

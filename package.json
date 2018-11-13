@@ -12,10 +12,10 @@
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "cookie-session": "^2.0.0-beta.3",
-    "eslint": "^5.9.0",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
     "lodash": "^4.17.11",
+    "moment": "^2.22.2",
     "mongoose": "^5.3.2",
     "morgan": "^1.9.1",
     "mssql": "^4.2.1",
@@ -25,6 +25,8 @@
     "passport-wechat": "^2.0.4"
   },
   "devDependencies": {
+    "eslint": "^5.9.0",
+    "faker": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-nodemon": "^2.4.1"
   }
