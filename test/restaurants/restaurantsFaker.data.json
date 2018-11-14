@@ -1,0 +1,378 @@
+[
+  {
+    "_id": "5bebc896184c2d4180b0efe8",
+    "details": {
+      "restaurantName": "Swaniawski - Brakus",
+      "restaurantProfileImage": "http://lorempixel.com/640/480/business",
+      "restaurantGallery": [
+        {
+          "categoryId": "5bebc896184c2d4180b0efe9",
+          "categoryName": "alarm",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        },
+        {
+          "categoryId": "5bebc896184c2d4180b0efea",
+          "categoryName": "pixel",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        },
+        {
+          "categoryId": "5bebc896184c2d4180b0efeb",
+          "categoryName": "microchip",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        }
+      ],
+      "address": {
+        "street": "Reuben Rest",
+        "area": "Permas Jaya",
+        "postcode": "81300",
+        "city": "Johor Bahru",
+        "state": "Johor",
+        "country": "Malaysia"
+      },
+      "rating": "4.1",
+      "restaurantType": "Fast Casual",
+      "costPerPax": "31",
+      "currency": "RM",
+      "currencyCode": "MYR",
+      "routineRestDay": ["1"],
+      "businessHours": [
+        { "day": 1, "openTime": "null", "closeTime": "null" },
+        { "day": 2, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 3, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 4, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 5, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 6, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 7, "openTime": "12:00:00", "closeTime": "23:00:00" }
+      ],
+      "contact": "924-826-4523",
+      "hasMenu": "true",
+      "hasReservation": "true",
+      "urlSlug": "swaniawski-brakus",
+      "hashId": "kk6r4PxGnDfw2NB2DYnm",
+      "fullAddress": "Reuben Rest Permas Jaya 81300 Johor Bahru Johor Malaysia",
+      "shortAreaName": "Permas Jaya",
+      "areaKnownAs": "Permas Jaya"
+    },
+    "vouchers": [],
+    "searchTags": ["pixel", "transmitter", "hard drive", "bus", "capacitor"],
+    "reservation": {
+      "reservationSettings": {
+        "maxReservationDay": "30",
+        "holidays": [
+          {
+            "holidayName": "transmitter",
+            "holidayDate": "2018-11-14T03:08:45.579Z"
+          },
+          { "holidayName": "array", "holidayDate": "2018-11-14T01:56:30.261Z" },
+          {
+            "holidayName": "matrix",
+            "holidayDate": "2018-11-13T16:49:04.380Z"
+          },
+          {
+            "holidayName": "interface",
+            "holidayDate": "2018-11-13T19:29:55.286Z"
+          },
+          {
+            "holidayName": "transmitter",
+            "holidayDate": "2018-11-13T19:33:13.545Z"
+          }
+        ],
+        "paxSettings": { "minPax": "2", "maxPax": "15" }
+      },
+      "reservationDetails": [
+        {
+          "reservationId": "5bebc896184c2d4180b0efec",
+          "userId": "5bebc896184c2d4180b0efed",
+          "reservationDate": "2018-11-13T18:30:12.768Z",
+          "reservationTime": "2018-11-14T05:01:32.414Z",
+          "dinningPax": "9",
+          "isReservationAccepted": true,
+          "remark": "The ADP card is down, generate the primary sensor so we can generate the SAS transmitter!"
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0efee",
+          "userId": "5bebc896184c2d4180b0efef",
+          "reservationDate": "2018-11-14T00:22:33.809Z",
+          "reservationTime": "2018-11-14T02:33:23.842Z",
+          "dinningPax": "6",
+          "isReservationAccepted": true,
+          "remark": "We need to hack the cross-platform SMS microchip!"
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0eff0",
+          "userId": "5bebc896184c2d4180b0eff1",
+          "reservationDate": "2018-11-14T02:58:10.499Z",
+          "reservationTime": "2018-11-14T00:23:37.147Z",
+          "dinningPax": "11",
+          "isReservationAccepted": false,
+          "remark": "hacking the hard drive won't do anything, we need to program the cross-platform SQL program!"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "5bebc896184c2d4180b0eff2",
+    "details": {
+      "restaurantName": "Casper, Leannon and Emmerich",
+      "restaurantProfileImage": "http://lorempixel.com/640/480/business",
+      "restaurantGallery": [
+        {
+          "categoryId": "5bebc896184c2d4180b0eff3",
+          "categoryName": "hard drive",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        },
+        {
+          "categoryId": "5bebc896184c2d4180b0eff4",
+          "categoryName": "driver",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        }
+      ],
+      "address": {
+        "street": "Carlo Inlet",
+        "area": "Stulang",
+        "postcode": "81300",
+        "city": "Johor Bahru",
+        "state": "Johor",
+        "country": "Malaysia"
+      },
+      "rating": "1.0",
+      "restaurantType": "Fast Casual",
+      "costPerPax": "7",
+      "currency": "RM",
+      "currencyCode": "MYR",
+      "routineRestDay": ["7"],
+      "businessHours": [
+        { "day": 1, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 2, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 3, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 4, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 5, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 6, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 7, "openTime": "null", "closeTime": "null" }
+      ],
+      "contact": "742-037-1288",
+      "hasMenu": "true",
+      "hasReservation": "false",
+      "urlSlug": "casper-leannon-and-emmerich",
+      "hashId": "xAo24m0YE9cXEOvEpmJ5",
+      "fullAddress": "Carlo Inlet Stulang 81300 Johor Bahru Johor Malaysia",
+      "shortAreaName": "Stulang",
+      "areaKnownAs": "Stulang"
+    },
+    "vouchers": [
+      {
+        "voucherId": "5bebc896184c2d4180b0eff5",
+        "voucherImage": "http://lorempixel.com/640/480/food",
+        "voucherName": "Stracke, Ryan and Roberts",
+        "voucherType": "quantityVoucher",
+        "newPrice": "105.80",
+        "quantitySold": "1",
+        "voucherRules": {
+          "validFrom": "2018-11-14T01:49:29.572Z",
+          "validUntil": "2019-05-02T23:02:40.223Z",
+          "startHour": "12:00:00",
+          "endHour": "23:00:00",
+          "ruleDetails": [
+            "Use the digital AGP alarm, then you can compress the cross-platform circuit!",
+            "The SAS protocol is down, generate the wireless pixel so we can parse the THX protocol!",
+            "Use the mobile GB pixel, then you can override the 1080p alarm!",
+            "Try to back up the JSON pixel, maybe it will back up the multi-byte pixel!"
+          ]
+        },
+        "status": "OP",
+        "basePrice": "151.78",
+        "groupVoucherDetails": [],
+        "suitablePax": "0",
+        "quantityDetails": []
+      },
+      {
+        "voucherId": "5bebc896184c2d4180b0eff6",
+        "voucherImage": "http://lorempixel.com/640/480/food",
+        "voucherName": "Senger and Sons",
+        "voucherType": "cashVoucher",
+        "newPrice": "29.80",
+        "quantitySold": "47",
+        "voucherRules": {
+          "validFrom": "2018-11-13T09:12:34.119Z",
+          "validUntil": "2019-08-28T03:20:44.214Z",
+          "startHour": "12:00:00",
+          "endHour": "23:00:00",
+          "ruleDetails": [
+            "Use the primary FTP panel, then you can copy the optical application!",
+            "You can't bypass the alarm without synthesizing the primary USB driver!",
+            "I'll override the neural HTTP panel, that should panel the AGP circuit!"
+          ]
+        },
+        "status": "OP",
+        "basePrice": "53.75",
+        "grabStartTime": "2018-11-19T02:00:48.137Z"
+      },
+      {
+        "voucherId": "5bebc896184c2d4180b0eff7",
+        "voucherImage": "http://lorempixel.com/640/480/food",
+        "voucherName": "Smith Group",
+        "voucherType": "cashVoucher",
+        "newPrice": "53.97",
+        "quantitySold": "14",
+        "voucherRules": {
+          "validFrom": "2018-11-13T18:41:01.335Z",
+          "validUntil": "2019-08-31T04:24:36.084Z",
+          "startHour": "12:00:00",
+          "endHour": "23:00:00",
+          "ruleDetails": [
+            "We need to parse the bluetooth SSL bandwidth!",
+            "The AI system is down, input the optical bandwidth so we can quantify the JBOD monitor!",
+            "Use the primary THX array, then you can reboot the solid state system!",
+            "indexing the matrix won't do anything, we need to copy the mobile CSS hard drive!",
+            "I'll calculate the virtual TCP circuit, that should firewall the COM protocol!",
+            "You can't parse the protocol without calculating the back-end THX bandwidth!"
+          ]
+        },
+        "status": "OP",
+        "basePrice": "65.00"
+      }
+    ],
+    "searchTags": ["bus", "monitor", "hard drive", "system", "system"]
+  },
+  {
+    "_id": "5bebc896184c2d4180b0eff8",
+    "details": {
+      "restaurantName": "Zboncak - Blanda",
+      "restaurantProfileImage": "http://lorempixel.com/640/480/business",
+      "restaurantGallery": [
+        {
+          "categoryId": "5bebc896184c2d4180b0eff9",
+          "categoryName": "driver",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        },
+        {
+          "categoryId": "5bebc896184c2d4180b0effa",
+          "categoryName": "system",
+          "categoryImages": [
+            "http://lorempixel.com/640/480/food",
+            "http://lorempixel.com/640/480/food"
+          ]
+        }
+      ],
+      "address": {
+        "street": "Crona Gateway",
+        "area": "Austin Height",
+        "postcode": "81300",
+        "city": "Johor Bahru",
+        "state": "Johor",
+        "country": "Malaysia"
+      },
+      "rating": "1.7",
+      "restaurantType": "Drinks",
+      "costPerPax": "34",
+      "currency": "RM",
+      "currencyCode": "MYR",
+      "routineRestDay": ["4"],
+      "businessHours": [
+        { "day": 1, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 2, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 3, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 4, "openTime": "null", "closeTime": "null" },
+        { "day": 5, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 6, "openTime": "12:00:00", "closeTime": "23:00:00" },
+        { "day": 7, "openTime": "12:00:00", "closeTime": "23:00:00" }
+      ],
+      "contact": "922-729-0133",
+      "hasMenu": "false",
+      "hasReservation": "true",
+      "urlSlug": "zboncak-blanda",
+      "hashId": "EEK0oBgJMGfq4Px4w1Wx",
+      "fullAddress": "Crona Gateway Austin Height 81300 Johor Bahru Johor Malaysia",
+      "shortAreaName": "Austin Height",
+      "areaKnownAs": "Austin Height"
+    },
+    "vouchers": [],
+    "searchTags": ["bus", "matrix", "panel", "microchip", "circuit"],
+    "reservation": {
+      "reservationSettings": {
+        "maxReservationDay": "30",
+        "holidays": [
+          {
+            "holidayName": "protocol",
+            "holidayDate": "2018-11-13T09:58:52.173Z"
+          },
+          {
+            "holidayName": "system",
+            "holidayDate": "2018-11-14T03:35:13.243Z"
+          },
+          {
+            "holidayName": "firewall",
+            "holidayDate": "2018-11-13T08:33:10.296Z"
+          },
+          {
+            "holidayName": "microchip",
+            "holidayDate": "2018-11-13T23:44:58.425Z"
+          }
+        ],
+        "paxSettings": { "minPax": "1", "maxPax": "22" }
+      },
+      "reservationDetails": [
+        {
+          "reservationId": "5bebc896184c2d4180b0effb",
+          "userId": "5bebc896184c2d4180b0effc",
+          "reservationDate": "2018-11-13T13:56:28.703Z",
+          "reservationTime": "2018-11-14T01:32:27.409Z",
+          "dinningPax": "20",
+          "isReservationAccepted": false,
+          "remark": "We need to quantify the digital PCI interface!"
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0effd",
+          "userId": "5bebc896184c2d4180b0effe",
+          "reservationDate": "2018-11-13T20:57:04.627Z",
+          "reservationTime": "2018-11-13T12:32:27.046Z",
+          "dinningPax": "2",
+          "isReservationAccepted": true
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0efff",
+          "userId": "5bebc896184c2d4180b0f000",
+          "reservationDate": "2018-11-13T20:09:09.463Z",
+          "reservationTime": "2018-11-13T09:44:01.315Z",
+          "dinningPax": "16",
+          "isReservationAccepted": true
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0f001",
+          "userId": "5bebc896184c2d4180b0f002",
+          "reservationDate": "2018-11-13T17:06:31.508Z",
+          "reservationTime": "2018-11-13T12:43:24.550Z",
+          "dinningPax": "13",
+          "isReservationAccepted": false
+        },
+        {
+          "reservationId": "5bebc896184c2d4180b0f003",
+          "userId": "5bebc896184c2d4180b0f004",
+          "reservationDate": "2018-11-14T03:31:02.024Z",
+          "reservationTime": "2018-11-13T18:43:36.260Z",
+          "dinningPax": "20",
+          "isReservationAccepted": true,
+          "remark": "Try to compress the SMS circuit, maybe it will override the 1080p panel!"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "voucherId": "5bebf1855dcb7e26e45bd20e",
+    "voucherImage": "http://lorempixel.com/640/480/food",
+    "voucherName": "Hoeger LLC",
+    "voucherType": "cashVoucher",
+    "newPrice": "100.41",
+    "quantitySold": "38",
+    "voucherRules": {
+      "validFrom": "2018-11-13T23:25:58.905Z",
+      "validUntil": "2019-08-02T14:23:04.618Z",
+      "startHour": "12:00:00",
+      "endHour": "23:00:00",
+      "ruleDetails": [
+        "We need to navigate the redundant CSS card!",
+        "If we quantify the port, we can get to the SSL pixel through the 1080p RAM program!"
+      ]
+    },
+    "status": "OP",
+    "basePrice": "142.05",
+    "groupVoucherDetails": [
+      { "groupQuantity": "2", "groupPricePerUnit": "90.41" }
+    ]
+  },
+  {
+    "voucherId": "5bebf1855dcb7e26e45bd20f",
+    "voucherImage": "http://lorempixel.com/640/480/food",
+    "voucherName": "Gleason, Kilback and Toy",
+    "voucherType": "cashVoucher",
+    "newPrice": "56.78",
+    "quantitySold": "97",
+    "voucherRules": {
+      "validFrom": "2018-11-14T00:56:40.728Z",
+      "validUntil": "2019-08-14T03:34:35.642Z",
+      "startHour": "12:00:00",
+      "endHour": "23:00:00",
+      "ruleDetails": [
+        "I'll bypass the redundant THX card, that should application the HDD protocol!",
+        "Use the online GB microchip, then you can back up the multi-byte firewall!",
+        "You can't connect the array without quantifying the cross-platform EXE driver!",
+        "I'll override the multi-byte HTTP application, that should monitor the TCP firewall!",
+        "The PNG monitor is down, program the wireless system so we can override the CSS alarm!",
+        "calculating the interface won't do anything, we need to navigate the open-source SDD firewall!"
+      ]
+    },
+    "status": "OP",
+    "limitedQuantity": "102",
+    "basePrice": "63.48"
+  }
+]

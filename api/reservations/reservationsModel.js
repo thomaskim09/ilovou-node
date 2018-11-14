@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const feedbackSchema = mongoose.Schema({
+const reservationSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   restaurant_id: {
     type: mongoose.Schema.Types.ObjectId,
@@ -17,15 +17,13 @@ const feedbackSchema = mongoose.Schema({
     ref: "User",
     required: true
   },
-  profileImage: String,
-  userName: String,
-  userRated: Number,
-  feedbackContent: String,
-  feedbackTime: { type: Date, default: Date.now },
-  imageUploadeds: [String],
-  restaurantReplyStatus: Boolean,
-  restaurantReplyContent: String,
+  reservationDate: Date,
+  reservationTime: Date,
+  dinningPax: Number,
+  dinningArea: String,
+  remark: String, // (optional)
+  isReservationAccepted: Boolean,
   modified_date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("Feedback", feedbackSchema);
+module.exports = mongoose.model("Reservation", reservationSchema);
