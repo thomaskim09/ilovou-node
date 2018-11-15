@@ -4,9 +4,7 @@ const mongoose = require("mongoose");
 const Hashids = require("hashids");
 const limax = require("limax");
 
-var restaurantsObj = {}; // empty object
-var key = "restaurant";
-restaurantsObj[key] = []; // empty array, which you can push() values into
+voucherIdList = ["1", "2", "3", "4", "5"];
 
 restaurantTypeList = [
   "Bakery",
@@ -46,6 +44,8 @@ areaList = [
 ];
 
 maxReservationDayList = ["30", "45", "60"];
+
+restaurants = [];
 
 // Assign new restaurants with random data
 for (var restaurantCounter = 1; restaurantCounter <= 3; restaurantCounter++) {
@@ -141,6 +141,15 @@ for (var restaurantCounter = 1; restaurantCounter <= 3; restaurantCounter++) {
       });
     }
   }
+  ///////////////////////////////////////////////////////////////////////////////////
+
+  for (
+    var voucherCounter = 0;
+    voucherCounter <= faker.random.number({ min: 1, max: 4 });
+    voucherCounter++
+  ) {
+    restaurant.vouchers.push(faker.random.arrayElement(voucherIdList));
+  }
 
   ///////////////////////////////////////////////////////////////////////////////////
 
@@ -165,7 +174,7 @@ for (var restaurantCounter = 1; restaurantCounter <= 3; restaurantCounter++) {
     ) {
       restaurant.reservation.reservationSettings.holidays.push({
         holidayName: faker.hacker.noun(),
-        holidayDate: faker.date.recent()
+        holidayDate: faker.date.recent(1)
       });
     }
   }
@@ -180,13 +189,13 @@ for (var restaurantCounter = 1; restaurantCounter <= 3; restaurantCounter++) {
   ///////////////////////////////////////////////////////////////////////////////////
 
   // Push this newly generated restaurant to the array
-  restaurantsObj[key].push(restaurant);
+  restaurants.push(restaurant);
 }
 
 // write array into JSON file
 fs.writeFile(
   __dirname + "/restaurantsFaker.data.json",
-  JSON.stringify(restaurantsObj.restaurant),
+  JSON.stringify(restaurants),
   "utf8",
   function(err) {
     if (err) {

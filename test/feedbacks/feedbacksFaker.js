@@ -1,14 +1,14 @@
 const fs = require("fs");
 const faker = require("faker");
-const mongoose = require("mongoose");
 
-var feedbackObj = {}; // empty object
-var key = "feedback";
-feedbackObj[key] = []; // empty array, which you can push() values into
+userIdList = ["1", "2", "3", "4", "5"];
+
+feedbacks = [];
 
 for (var feedbackCounter = 1; feedbackCounter <= 3; feedbackCounter++) {
   var feedback = {
     profileImage: faker.image.avatar(),
+    userId: faker.random.arrayElement(userIdList),
     userName: faker.name.findName(),
     userRated: faker.random.number({ min: 1, max: 5 }).toString(),
     feedbackContent: faker.lorem.paragraph(),
@@ -30,13 +30,13 @@ for (var feedbackCounter = 1; feedbackCounter <= 3; feedbackCounter++) {
   }
 
   // Push this newly generated restaurant to the array
-  feedbackObj[key].push(feedback);
+  feedbacks.push(feedback);
 }
 
 // write array into JSON file
 fs.writeFile(
   __dirname + "/feedbacksFaker.data.json",
-  JSON.stringify(feedbackObj),
+  JSON.stringify(feedbacks),
   "utf8",
   function(err) {
     if (err) {

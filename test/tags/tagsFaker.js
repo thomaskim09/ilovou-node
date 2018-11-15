@@ -1,10 +1,5 @@
 const fs = require("fs");
-const faker = require("faker");
 const mongoose = require("mongoose");
-
-var tagsObj = {}; // empty object
-var key = "tags";
-tagsObj[key] = []; // empty array, which you can push() values into
 
 foodTagsList = [
   "Beef",
@@ -118,13 +113,6 @@ var tags = {
   foodTags: []
 };
 
-for (var tagCounter = 0; tagCounter < foodTagsList.length; tagCounter++) {
-  tags.foodTags.push({
-    _id: mongoose.Types.ObjectId(),
-    name: foodTagsList[tagCounter]
-  });
-}
-
 for (var tagCounter = 0; tagCounter < restaurantTypeList.length; tagCounter++) {
   tags.restaurantType.push({
     _id: mongoose.Types.ObjectId(),
@@ -132,13 +120,17 @@ for (var tagCounter = 0; tagCounter < restaurantTypeList.length; tagCounter++) {
   });
 }
 
-// Push this newly generated restaurant to the array
-tagsObj[key].push(tag);
+for (var tagCounter = 0; tagCounter < foodTagsList.length; tagCounter++) {
+  tags.foodTags.push({
+    _id: mongoose.Types.ObjectId(),
+    name: foodTagsList[tagCounter]
+  });
+}
 
 // write array into JSON file
 fs.writeFile(
   __dirname + "/tagsFaker.data.json",
-  JSON.stringify(tagsObj),
+  JSON.stringify(tags),
   "utf8",
   function(err) {
     if (err) {

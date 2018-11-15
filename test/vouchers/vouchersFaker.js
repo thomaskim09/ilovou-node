@@ -2,20 +2,14 @@ const fs = require("fs");
 const faker = require("faker");
 const mongoose = require("mongoose");
 
-var voucherObj = {}; // empty object
-var key = "vouchers";
-voucherObj[key] = []; // empty array, which you can push() values into
-
 voucherTypeList = ["cashVoucher", "quantityVoucher", "setVoucher"];
+
+userIdList = ["1", "2", "3", "4", "5"];
 
 // generate vouchers
 var vouchers = [];
 
-for (
-  var voucherCount = 1;
-  voucherCount <= faker.random.number(5);
-  voucherCount++
-) {
+for (var voucherCount = 1; voucherCount <= 5; voucherCount++) {
   var voucher = {
     _id: mongoose.Types.ObjectId(),
     voucherImage: faker.image.food(),
@@ -63,7 +57,7 @@ for (
         userPurchasedCounter++
       ) {
         voucher.userReachedLimiQuantity.push({
-          userId: mongoose.Types.ObjectId(),
+          userId: faker.random.arrayElement(userIdList),
           quantityBrought: faker.random.number(
             parseInt(voucher.limitQuantityPerUser)
           )
@@ -128,7 +122,7 @@ for (
     voucher.quantityDetails = [];
     for (
       quantityCounter = 0;
-      quantityCounter < faker.random.number(3);
+      quantityCounter < faker.random.number({ min: 1, max: 3 });
       quantityCounter++
     ) {
       voucher.quantityDetails.push({
@@ -189,13 +183,13 @@ for (
   }
 
   // Push this newly generated voucher to the array
-  voucherObj[key].push(voucher);
+  vouchers.push(voucher);
 }
 
 // write array into JSON file
 fs.writeFile(
   __dirname + "/vouchersFaker.data.json",
-  JSON.stringify(voucherObj.vouchers),
+  JSON.stringify(vouchers),
   "utf8",
   function(err) {
     if (err) {

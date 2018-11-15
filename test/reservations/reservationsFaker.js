@@ -2,6 +2,8 @@ const fs = require("fs");
 const faker = require("faker");
 const mongoose = require("mongoose");
 
+userIdList = ["1", "2", "3", "4", "5"];
+
 var reservations = [];
 
 for (
@@ -12,7 +14,7 @@ for (
   // generate reservation details
   reservations.push({
     _id: mongoose.Types.ObjectId(),
-    userId: mongoose.Types.ObjectId(),
+    userId: faker.random.arrayElement(userIdList),
     reservationDate: faker.date.recent(),
     reservationTime: faker.date.recent(),
     dinningPax: faker.random.number(5).toString(),
