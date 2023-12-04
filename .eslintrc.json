@@ -1,0 +1,78 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "plugins": [
+        "security"
+    ],
+    "extends": [
+        "airbnb-base",
+        "plugin:security/recommended",
+        "eslint:recommended",
+        "plugin:node/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "comma-dangle": [
+            "error",
+            {
+                "arrays": "never",
+                "objects": "never",
+                "imports": "never",
+                "exports": "never",
+                "functions": "ignore"
+            }
+        ],
+        "no-underscore-dangle": [
+            "error",
+            {
+                "allow": [
+                    "_id"
+                ]
+            }
+        ],
+        "quote-props": 0,
+        "object-shorthand": 0,
+        "new-cap": 0,
+        "no-unused-vars": [
+            "error",
+            {
+                "args": "none"
+            }
+        ],
+        "consistent-return": 0,
+        "prefer-destructuring": 0,
+        "indent": 0,
+        "eol-last": 0,
+        "no-plusplus": 0,
+        "quotes": ["error", "single", {
+            "allowTemplateLiterals": true
+        }],
+        "no-param-reassign": 0,
+        "max-len": 0,
+        "strict": 0,
+        "node/exports-style": ["error", "module.exports"],
+        "node/file-extension-in-import": ["error", "always"],
+        "node/prefer-global/buffer": ["error", "always"],
+        "node/prefer-global/console": ["error", "always"],
+        "node/prefer-global/process": ["error", "always"],
+        "node/prefer-global/url-search-params": ["error", "always"],
+        "node/prefer-global/url": ["error", "always"],
+        "node/prefer-promises/dns": "error",
+        "node/no-unpublished-require": 0,
+        "node/prefer-promises/fs": 0,
+        "security/detect-non-literal-fs-filename": 0
+    }
+}
